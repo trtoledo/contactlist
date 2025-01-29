@@ -8,7 +8,7 @@ import axios from "axios";
 //     { id: 3, name: "BB-8", phone: "888-888-8888", email: "bb8@droids.com" },
 //   ];
 
-function ContactList() { 
+function ContactList({setFeaturedUser}) { 
   const [contacts, setContacts] = useState([]);
   useEffect(() => {
     axios("https://fsa-jsonplaceholder-69b5c48f1259.herokuapp.com/users")
@@ -38,10 +38,8 @@ function ContactList() {
             </tr>
             {
               contacts.map((contact) => (
-                <ContactRow key={contact.id} contact={contact} />
-              ))
-               // Map over data here
-             }
+                <ContactRow key={contact.id} contact={contact} setFeaturedUser={setFeaturedUser} />
+              ))}
           </tbody>
         </table>
     ); 
