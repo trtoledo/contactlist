@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import ContactRow from "../ContactRow/ContactRow";
+import ContactRow from "./ContactRow/ContactRow";
 
 import axios from "axios";
 

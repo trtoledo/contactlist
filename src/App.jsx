@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import ContactList from "./components/ContactList/ContactList";
+import ContactList from "./components/ContactList";
 import SingleUserDetails from "./components/SingleUserDetails/SingleUserDetails";
 
 function App() {
